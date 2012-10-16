@@ -1,0 +1,9 @@
+{% load i18n %}
+<div>
+	<p>{{ summary.percentage }} {% trans "carbon saved in one year" %}.</p>
+	<ul>
+	{% for cat in summary.categories_as_list %}
+		<li class="{{ cat|slugify }}">{{ cat }}</li>
+	{% endfor %}
+	</ul>
+</div>

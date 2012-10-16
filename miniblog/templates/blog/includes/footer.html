@@ -1,0 +1,34 @@
+{% comment %}
+<div class="ws-v row-fluid">
+
+	<div class="span6 post-cat-list">{% blog_categories as all_categories %}
+		<h2>Browse news by topic</h2>
+		<ul>
+		{% for cat in all_categories|slice:":6" %}
+			<li class="post-cat-{{ cat.id }}-link{% ifequal cat category %} active{% endifequal %}"><a href="{% url blog_post_list_category cat.slug %}">{{ cat.name }}</a></li>
+		{% endfor %}
+		
+		{% if all_categories|length > 6 %}
+			<li><a href="{% url blog_categories %}">All categories</a></li>
+		{% endif %}
+		</ul>
+
+		{% if category %}
+			<a href="{% url blog_post_list %}" class="btn">Clear Filter</a>
+		{% endif %}
+	</div>
+
+	<div class="span6 author-list">{% blog_featured_authors 7 as featured_authors %}
+		<h2>Authors &amp; Contributors</h2>
+		<ul>
+		{% for author in featured_authors %}
+			<li>
+				<a href="{% url blog_post_list_author author.pk %}">{{ author }}</a>
+			</li>
+		{% endfor %}
+		</ul>
+		
+		<a href="{% url blog_authors %}">All our contributors</a>
+	</div>
+</div>
+{% endcomment %}

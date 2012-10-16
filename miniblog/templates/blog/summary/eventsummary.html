@@ -1,0 +1,12 @@
+{% load i18n %}
+<div class="well">
+	<h3>{{ summary.date|date:"N d" }}</h3>
+	<h4>{{ summary.location }}</h4>
+	{% if summary.supported_by %}
+  	<p>{% trans "Sponsor" %}: {{ summary.supported_by }}</p>
+	{% endif %}
+	
+	{% if summary.text %}
+		{{ summary.text|safe }}
+	{% endif %}
+</div>

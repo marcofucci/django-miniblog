@@ -1,0 +1,75 @@
+{% extends "base.html" %}{% load i18n pagination_tags %}
+
+{% block title %}{% if category %}: {{ category.name }}{% endif %}{% if tag %}: {{ tag }}{% endif %}{% if author %}: {{ author }}{% endif %}{% endblock title %}
+
+{% block meta_description %}, post list{% endblock %}
+
+{% block content %}
+	<div class="header-nav">
+		<h1>Recent Posts</h1>
+
+		<div id="navbar-example" class="navbar navbar-static">
+			<div class="navbar-inner">
+				<div class="container" style="width: auto;">
+					<a class="brand">Filter By</a>
+					<ul class="nav" role="navigation">
+						<li class="dropdown">
+							<a id="drop1" href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">Category <b class="caret"></b></a>
+							<ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
+								{% for cat in categories|slice:":10" %}
+								<li><a href="{% url blog_post_list_category cat.slug %}">{{ cat.name }}</a></li>
+								{% endfor %}
+							</ul>
+						</li>
+
+						<li class="dropdown">
+							<a id="drop2" href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">Tag <b class="caret"></b></a>
+							<ul class="dropdown-menu" role="menu" aria-labelledby="drop2">
+								{% for tag in tags|slice:":10" %}
+								<li><a href="{% url blog_post_list_tag tag.slug %}">{{ tag }}</a></li>
+								{% endfor %}
+							</ul>
+						</li>
+
+						<li class="dropdown">
+							<a id="drop3" href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">Author <b class="caret"></b></a>
+							<ul class="dropdown-menu" role="menu" aria-labelledby="drop3">
+								{% for auth in authors|slice:":10" %}
+								<li><a href="{% url blog_post_list_author auth.pk %}">{{ auth }}</a></li>
+								{% endfor %}
+							</ul>
+						</li>
+					</ul>
+
+					<div class="pull-right">
+						{% if category or author or tag %}
+						<a class="brand">Showing: </a>
+						<a class="btn" href="{% url blog_post_list %}">{% if category %}{{ category.name }}{% endif %}{% if author %}{{ author }}{% endif %}{% if tag %}{{ tag.name }}{% endif %}<span class="icon-remove"></span></a>
+						{% endif %}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="blog-category-text">
+		{% if category.description %}
+		<h4>{{ category }}</h4>
+		<p>{{ category.description|safe }}</p>
+		{% endif %}
+	</div>
+
+	<div class="post-list">
+		{% if not posts %}
+		<i>No posts found</i>
+		{% else %}
+		{% autopaginate posts 2 %}
+
+		{% include "blog/includes/posts_list.html" %}
+
+		{% paginate %}
+		{% endif %}
+	</div>
+
+	{% include "blog/includes/footer.html" %}
+{% endblock %}

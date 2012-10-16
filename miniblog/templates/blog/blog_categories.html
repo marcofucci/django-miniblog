@@ -1,0 +1,35 @@
+{% extends "base.html" %}{% load i18n pagination_tags fb_versions %}
+
+{% block css %}
+	<link rel="stylesheet" href="{{ STATIC_URL }}css/blog.css" type="text/css" media="screen">
+{% endblock %}
+
+{% block meta_keywords %}Categories{% endblock %}
+{% block meta_description %}News Categories{% endblock %}
+
+{% block page_title %}{% trans "News Categories" %}{% endblock page_title %}
+
+{% block content %}
+	<div class="header-nav">
+		<h1>{% trans "News Categories" %}</h1>
+	</div>
+
+	<div class="post-list">
+		{% autopaginate categories 10 %}
+
+		<div class="ws-v">
+		{% for cat in categories %}
+			<div class="ws-b">
+				<a href="{% url blog_post_list_category cat.slug %}">{{ cat.name }}</a>
+				{% if cat.summary %}
+					<p>{{ cat.summary|safe }}</p>
+				{% endif %}
+			</div>
+		{% endfor %}
+		</div>
+
+		{% paginate %}
+	</div>
+
+	{% include "blog/includes/footer.html" %}
+{% endblock %}

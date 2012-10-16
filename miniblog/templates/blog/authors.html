@@ -1,0 +1,28 @@
+{% extends "base.html" %}{% load i18n fb_versions %}
+
+{% block css %}
+	<link rel="stylesheet" href="{{ STATIC_URL }}css/blog.css" type="text/css" media="screen">
+{% endblock %}
+
+{% block meta_keywords %}{% trans "Authors" %}{% endblock %}
+{% block meta_description %}{% trans "News authors" %}{% endblock %}
+
+{% block page_title %}{% trans "News Authors" %}{% endblock page_title %}
+
+{% block content %}
+	<div class="header-nav">
+		<h1>{% trans "News Authors" %}</h1>
+	</div>
+
+	<div class="post-list">
+		<ul class="author-list">
+		{% for author in authors %}
+			<li style="background-image: url({{ author.get_thumb_profile_picture_url }})">
+				<a href="{% url blog_post_list_author author.pk %}">{{ author }}</a>
+			</li>
+		{% endfor %}
+		</ul>
+	</div>
+	
+	{% include "blog/includes/footer.html" %}
+{% endblock %}

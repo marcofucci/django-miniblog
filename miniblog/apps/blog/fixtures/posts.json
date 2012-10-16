@@ -1,0 +1,266 @@
+[
+    {
+        "pk": 1, 
+        "model": "blog.category", 
+        "fields": {
+            "description": "<p>Music is an art form whose medium is sound and silence. Its common elements are pitch (which governs melody and harmony), rhythm (and its associated concepts tempo, meter, and articulation), dynamics, and the sonic qualities of timbre and texture.</p>", 
+            "name": "Music", 
+            "slug": "music"
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "blog.category", 
+        "fields": {
+            "description": "<p>Fun is the enjoyment of pleasure and, according to Johan Huizinga, \"<em>an absolutely primary category of life, familiar to everybody at a glance right down to the animal level.</em>\"</p>", 
+            "name": "Fun", 
+            "slug": "fun"
+        }
+    }, 
+    {
+        "pk": 1, 
+        "model": "taggit.tag", 
+        "fields": {
+            "name": "music", 
+            "slug": "music"
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "taggit.tag", 
+        "fields": {
+            "name": "django", 
+            "slug": "django"
+        }
+    }, 
+    {
+        "pk": 3, 
+        "model": "taggit.tag", 
+        "fields": {
+            "name": "fun", 
+            "slug": "fun"
+        }
+    }, 
+    {
+        "pk": 4, 
+        "model": "taggit.tag", 
+        "fields": {
+            "name": "blues", 
+            "slug": "blues"
+        }
+    }, 
+    {
+        "pk": 5, 
+        "model": "taggit.tag", 
+        "fields": {
+            "name": "rock", 
+            "slug": "rock"
+        }
+    }, 
+    {
+        "pk": 6, 
+        "model": "taggit.tag", 
+        "fields": {
+            "name": "signing", 
+            "slug": "signing"
+        }
+    }, 
+    {
+        "pk": 7, 
+        "model": "taggit.tag", 
+        "fields": {
+            "name": "draw", 
+            "slug": "draw"
+        }
+    }, 
+    {
+        "pk": 7, 
+        "model": "taggit.taggeditem", 
+        "fields": {
+            "tag": 1, 
+            "content_type": 10, 
+            "object_id": 3
+        }
+    }, 
+    {
+        "pk": 8, 
+        "model": "taggit.taggeditem", 
+        "fields": {
+            "tag": 4, 
+            "content_type": 10, 
+            "object_id": 3
+        }
+    }, 
+    {
+        "pk": 9, 
+        "model": "taggit.taggeditem", 
+        "fields": {
+            "tag": 1, 
+            "content_type": 10, 
+            "object_id": 4
+        }
+    }, 
+    {
+        "pk": 10, 
+        "model": "taggit.taggeditem", 
+        "fields": {
+            "tag": 5, 
+            "content_type": 10, 
+            "object_id": 4
+        }
+    }, 
+    {
+        "pk": 11, 
+        "model": "taggit.taggeditem", 
+        "fields": {
+            "tag": 3, 
+            "content_type": 10, 
+            "object_id": 5
+        }
+    }, 
+    {
+        "pk": 12, 
+        "model": "taggit.taggeditem", 
+        "fields": {
+            "tag": 6, 
+            "content_type": 10, 
+            "object_id": 5
+        }
+    }, 
+    {
+        "pk": 13, 
+        "model": "taggit.taggeditem", 
+        "fields": {
+            "tag": 3, 
+            "content_type": 10, 
+            "object_id": 6
+        }
+    }, 
+    {
+        "pk": 14, 
+        "model": "taggit.taggeditem", 
+        "fields": {
+            "tag": 7, 
+            "content_type": 10, 
+            "object_id": 6
+        }
+    }, 
+    {
+        "pk": 1, 
+        "model": "auth.user", 
+        "fields": {
+            "username": "admin", 
+            "first_name": "", 
+            "last_name": "", 
+            "is_active": true, 
+            "is_superuser": true, 
+            "is_staff": true, 
+            "last_login": "2012-10-15T15:08:45Z", 
+            "groups": [], 
+            "user_permissions": [], 
+            "password": "pbkdf2_sha256$10000$WdiyzuZznZik$CbNLzIBb2Sm5oCYXC80mC+k943ruRjmkwyJGSJ80KNg=", 
+            "email": "marcofucci@gmail.com", 
+            "date_joined": "2012-10-15T13:39:55Z"
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "auth.user", 
+        "fields": {
+            "username": "marcofucci", 
+            "first_name": "Marco", 
+            "last_name": "Fucci", 
+            "is_active": true, 
+            "is_superuser": false, 
+            "is_staff": true, 
+            "last_login": "2012-10-16T11:34:24Z", 
+            "groups": [], 
+            "user_permissions": [], 
+            "password": "pbkdf2_sha256$10000$edVyKad47yU0$e5auR/jvAMECHrG9PYtOWHPIMw5lq+z3+MLIMbLD+D4=", 
+            "email": "info@marcofucci.com", 
+            "date_joined": "2012-10-16T11:34:24Z"
+        }
+    }, 
+    {
+        "pk": 3, 
+        "model": "auth.user", 
+        "fields": {
+            "username": "johndoe", 
+            "first_name": "John", 
+            "last_name": "Doe", 
+            "is_active": true, 
+            "is_superuser": false, 
+            "is_staff": true, 
+            "last_login": "2012-10-16T11:34:59Z", 
+            "groups": [], 
+            "user_permissions": [], 
+            "password": "pbkdf2_sha256$10000$xt44qsGb2DYq$grDKVPV0o0ike61fN0mTk84D5pNSgyqq7NdIw9YCOy4=", 
+            "email": "", 
+            "date_joined": "2012-10-16T11:34:59Z"
+        }
+    }, 
+    {
+        "pk": 6, 
+        "model": "blog.post", 
+        "fields": {
+            "category": 2, 
+            "body": "<p>Suspendisse dictum feugiat nisl ut dapibus. Mauris iaculis porttitor posuere. Praesent id metus massa, ut blandit odio. Proin quis tortor orci. Etiam at risus et justo dignissim congue. Donec congue lacinia dui, a porttitor lectus condimentum laoreet. Nunc eu ullamcorper orci. Quisque eget odio ac lectus vestibulum faucibus eget in metus. In pellentesque faucibus vestibulum. Nulla at nulla justo, eget luctus tortor. Nulla facilisi. Duis aliquet egestas purus in blandit. Curabitur vulputate, ligula lacinia scelerisque tempor, lacus lacus ornare ante, ac egestas est urna sit amet arcu. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed molestie augue sit amet leo consequat posuere. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Proin vel ante a orci tempus eleifend ut et magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus luctus urna sed urna ultricies ac tempor dui sagittis. In condimentum facilisis porta. Sed nec diam eu diam mattis.</p>", 
+            "author": 3, 
+            "created_at": "2012-10-16T11:39:58Z", 
+            "title": "Learn to draw", 
+            "modified_at": "2012-10-16T11:39:58Z", 
+            "summary": "Drawing is a form of visual art that makes use of any number of drawing instruments to mark a two-dimensional medium. Common instruments include graphite pencils, pen and ink, inked brushes, wax color pencils, crayons, charcoal, chalk, pastels, various kinds of erasers, markers, styluses, and various metals (such as silverpoint). An artist who practices or works in drawing may be called a draftsman or draughtsman.", 
+            "status": 1, 
+            "authored_at": "2012-10-16T11:39:10Z", 
+            "slug": "learn-draw"
+        }
+    }, 
+    {
+        "pk": 5, 
+        "model": "blog.post", 
+        "fields": {
+            "category": 2, 
+            "body": "<p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Proin vel ante a orci tempus eleifend ut et magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus luctus urna sed urna ultricies ac tempor dui sagittis. In condimentum facilisis porta. Sed nec diam eu diam mattis viverra. Nulla fringilla, orci ac euismod semper, magna diam porttitor mauris, quis sollicitudin sapien justo in libero. Vestibulum mollis mauris enim. Morbi euismod magna ac lorem rutrum elementum. Donec viverra auctor lobortis. Pellentesque eu est a nulla placerat dignissim. Morbi a enim in magna.</p>", 
+            "author": 3, 
+            "created_at": "2012-10-16T11:39:09Z", 
+            "title": "Learn to sing", 
+            "modified_at": "2012-10-16T11:39:09Z", 
+            "summary": "Singing is the act of producing musical sounds with the voice, and augments regular speech by the use of both tonality and rhythm. One who sings is called a singer or vocalist. ", 
+            "status": 2, 
+            "authored_at": "2012-10-16T11:37:51Z", 
+            "slug": "learn-sing"
+        }
+    }, 
+    {
+        "pk": 4, 
+        "model": "blog.post", 
+        "fields": {
+            "category": 1, 
+            "body": "<p>Morbi ac commodo nulla. In condimentum orci id nisl volutpat bibendum. Quisque commodo hendrerit lorem quis egestas. Maecenas quis tortor arcu. Vivamus rutrum nunc non neque consectetur quis placerat neque lobortis. Nam vestibulum, arcu sodales feugiat consectetur, nisl orci bibendum elit, eu euismod magna sapien ut nibh. Donec semper quam scelerisque tortor dictum gravida. In hac habitasse platea dictumst. Nam pulvinar, odio sed rhoncus suscipit, sem diam ultrices mauris, eu consequat purus metus eu velit. Proin metus odio, aliquam eget molestie nec, gravida ut sapien. Phasellus quis est sed turpis sollicitudin venenatis sed eu odio. Praesent eget neque eu eros interdum malesuada non vel leo. Sed fringilla porta ligula egestas tincidunt. Nullam risus magna, ornare vitae varius eget, scelerisque a libero. Morbi eu porttitor ipsum. Nullam lorem nisi, posuere quis volutpat eget.</p>", 
+            "author": 2, 
+            "created_at": "2012-10-16T11:37:50Z", 
+            "title": "A Brief History of the Rock", 
+            "modified_at": "2012-10-16T11:37:50Z", 
+            "summary": "Rock music is a genre of popular music that originated as \"rock and roll\" in 1950s America and developed into a range of different styles in the 1960s and later, particularly in the United Kingdom and the United States", 
+            "status": 2, 
+            "authored_at": "2012-10-16T11:36:52Z", 
+            "slug": "brief-history-rock"
+        }
+    }, 
+    {
+        "pk": 3, 
+        "model": "blog.post", 
+        "fields": {
+            "category": 1, 
+            "body": "<p>Aliquam erat volutpat. Mauris vel neque sit amet nunc gravida congue sed sit amet purus. Quisque lacus quam, egestas ac tincidunt a, lacinia vel velit. Aenean facilisis nulla vitae urna tincidunt congue sed ut dui. Morbi malesuada nulla nec purus convallis consequat. Vivamus id mollis quam. Morbi ac commodo nulla. In condimentum orci id nisl volutpat bibendum. Quisque commodo hendrerit lorem quis egestas. Maecenas quis tortor arcu. Vivamus rutrum nunc non neque consectetur quis placerat neque lobortis. Nam vestibulum, arcu sodales feugiat consectetur, nisl orci bibendum elit, eu euismod magna sapien ut nibh. Donec semper quam scelerisque tortor dictum gravida. In hac habitasse platea dictumst. Nam pulvinar, odio sed rhoncus suscipit, sem diam ultrices mauris, eu consequat purus.</p>", 
+            "author": 2, 
+            "created_at": "2012-10-16T11:36:48Z", 
+            "title": "A Brief History of the Blues", 
+            "modified_at": "2012-10-16T11:36:48Z", 
+            "summary": "Blues is the name given to both a musical form and a music genre[1] that originated in African-American communities of primarily the \"Deep South\" of the United States around the end of the 19th century from spirituals, work songs, field hollers, shouts and chants, and rhymed simple narrative ballads.", 
+            "status": 2, 
+            "authored_at": "2012-10-16T11:35:29Z", 
+            "slug": "brief-history-blues"
+        }
+    }
+]
